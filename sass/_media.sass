@@ -1,0 +1,273 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+// @media (max-width: 1200px)
+/* */
+  
+// ≥992px
+@media (max-width: 992px)
+  header .wrapper 
+    .logo div:nth-child(2)
+      right: 0
+  
+  .product 
+    .wrapper  
+      padding: 0 3vw
+    .product_slider 
+      .slick-arrow
+        top: 20%
+      .product_slider_item 
+        p 
+          font-size: 1.2em
+        .image
+          padding: 1rem
+      .product_slider_item.slick-center 
+        .image 
+          padding: .8rem
+
+  .features 
+    .features_wrapper 
+      flex-wrap: wrap
+      .features_item 
+        width: 45%
+        justify-content: center
+        align-items: center
+        .image 
+          width: 100%
+
+  footer 
+    .wrapper
+      .footer_item:nth-child(1),
+        width: 32%
+      .footer_item:nth-child(2),
+        width: 32%
+      .footer_item:nth-child(3),
+        width: 32%
+      .footer_item:nth-child(4)
+        flex-wrap: wrap
+        flex-direction: row
+        display: flex
+        width: 70%
+        justify-content: space-between
+        p 
+          width: 100%
+        form 
+          width: 43%
+        .socials 
+          width: 38%
+          margin: 0 3rem 2rem 0
+          
+      .footer_item:nth-child(5)
+        width: 30%
+        display: flex
+        flex-direction: column 
+        justify-content: flex-end
+        align-items: flex-end
+        p 
+          order: 2
+          margin-top: 1rem
+          // width: 100% 
+        .language_wrapper
+          order: 1
+          p 
+            margin-top: 0
+            min-width: initial
+  
+// ≥768px
+@media (max-width: 768px)
+
+  
+  
+  // ≥576px
+@media (max-width: 576px)
+  html,body
+    font-size: 4vw
+  .wrapper 
+    padding: 0 4vw
+  h1, .h1 
+    font-size: 2.5em
+  h2, .h2 
+    font-size: 1.8em
+  header 
+    .wrapper 
+      .basket .image
+        width: 3.4vw
+      .burger 
+        display: flex
+      .logo 
+        margin-right: 0
+      .search-wrapper
+        flex-basis: 10%
+        .search input[type=search]:focus
+          width: 11rem
+      nav 
+        position: fixed
+        width: 100vw
+        height: 100vh 
+        background-color: $black
+        transition: all .2s linear 
+        opacity: 0 
+        transform: translateY(-100%)
+        top: 0
+        left: 0
+        z-index: 1000
+        justify-content: center
+        .menu
+          li 
+            justify-content: center
+            a 
+              font-size: initial
+        .menu 
+          flex-direction: column
+      nav.active 
+        opacity: 1 
+        transform: translateY(0)
+  
+  .first_screen 
+    .first_screen_slider 
+      .first_screen_slider_item_second,
+      .first_screen_slider_item_first
+        .image 
+          width: 15rem
+        .first_screen_slider_item_content_wrapper
+          margin-top: 0
+          z-index: 1000
+          h1 
+            width: initial
+            color: $white
+            align-self: center
+            text-align: center
+          button 
+            align-self: center
+      .first_screen_slider_item_second
+        .image 
+          width: 22rem
+
+
+      .first_screen_slider_item_first.slick-active ,
+      .first_screen_slider_item_second.slick-active 
+        .image
+          transform: translateX(0rem)
+
+        .first_screen_slider_item_content_wrapper
+          transform: translateX(0)
+
+  header .wrapper 
+    .logo div:nth-child(2)
+      right: -0.8rem
+
+  .product 
+    .product_slider 
+      .product_slider_item 
+        width: 20rem
+        p 
+          font-size: 1.2em
+        .image
+          padding: 0 3rem
+          
+      .product_slider_item.slick-center 
+        .image 
+          padding: 3.1rem
+  
+  .about
+    padding-top: 0
+  .about.bg3
+    background-image: none 
+    .wrapper 
+      .about_content 
+        width: 100%
+        h2, p 
+          color: $black
+        h2 
+          text-align: center
+          margin-top: 0
+        
+  .features 
+    margin-top: 0
+    h2 
+      margin: 0.5rem 0
+    .cross 
+      margin-bottom: 0.5rem
+    .features_wrapper 
+      margin-top: 0.5rem
+      .features_item 
+        width: 90%
+
+
+  footer 
+    
+    .wrapper
+      .footer_item 
+        ul 
+          li 
+            a 
+              font-size: 0.95em
+      .footer_item:nth-child(1),
+        width: 45%
+      .footer_item:nth-child(2),
+        width: 45%
+      .footer_item:nth-child(3),
+        width: 100%
+        ul 
+          flex-direction: row 
+          flex-wrap: wrap
+          li:first-child
+            width: 100% 
+          li 
+            margin-right: 1rem
+      .footer_item:nth-child(4)
+        flex-wrap: wrap
+        flex-direction: row
+        display: flex
+        width: 100%
+        justify-content: space-around
+        p 
+          width: 100%
+        form 
+          width: 100%
+           
+        .socials 
+          width: 90%
+          margin: 1rem 0 
+          justify-content: space-around
+          
+      .footer_item:nth-child(5)
+        width: 100%
+        display: flex
+        flex-direction: column 
+        justify-content: center
+        align-items: center
+        p 
+          order: 2
+          margin-top: 1rem
+          // width: 100% 
+        .language_wrapper
+          order: 1
+          p 
+            margin-top: 0
+            min-width: initial
+  
+  
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@madia (min-width: 576px)
+
+// ≤768px
+@media (min-width: 768px)
+  html,body
+    font-size: 1.5vw
+
+// ≤992px
+@media (min-width: 992px)
+  html,body
+    font-size: 1.2vw
+
+// ≤1200px
+@media (min-width: 1400px)
+  // 

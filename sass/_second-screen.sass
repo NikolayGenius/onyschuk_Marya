@@ -1,0 +1,46 @@
+.product
+    .wrapper 
+        padding: 0 5vw
+    .cross
+        display: flex
+        justify-content: center
+
+    
+    .product_slider
+
+        .product_slider_item
+            padding: 1rem
+            .image 
+                padding: 0 6rem
+                transition: all 1s linear
+                img 
+                    transition: all 1s linear
+                    opacity: .6
+                    filter: grayscale(80%)
+        .product_slider_item.slick-center
+            .image 
+                padding: 0 5.8rem 
+                img 
+                    opacity: 1
+                    filter: grayscale(0)
+      
+        .slick-prev
+            left: 0
+            transform: rotate(-180deg)
+            svg 
+                fill: $gray 
+                opacity: .5
+            &:hover 
+                svg 
+                    fill: gray1
+                    opacity: 1
+        .slick-next 
+            right: 0
+            transform: rotate(180deg)
+            svg 
+                fill: $gray 
+                opacity: .5
+            &:hover 
+                svg 
+                    fill: gray1
+                    opacity: 1

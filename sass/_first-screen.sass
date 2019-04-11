@@ -1,0 +1,74 @@
+.first_screen
+    padding: 0
+    .first_screen_slider
+        overflow: hidden
+        .first_screen_slider_item_first,
+        .first_screen_slider_item_second
+            overflow: hidden
+            min-height: 90vh  
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            position: relative
+            transition: all  1s linear
+            h1 
+                width: 26rem
+            .image
+                position: absolute
+                z-index: 100
+                width: 20rem
+                transition: all 1s linear
+            .first_screen_slider_item_content_wrapper
+                display: flex
+                flex-direction: column
+                transition: all 1s linear
+                // transform: translateX(10rem)
+                h1 
+                    align-self: flex-start
+                button 
+                    align-self: flex-end
+            .bg1, .bg2
+                background-position: center
+                background-size: cover 
+                background-repeat: no-repeat
+                transform: scale(1.01)
+                position: absolute
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                z-index: -1
+            .bg1
+                background-image: url(../img/slider1.jpg)
+            .bg2
+                background-image: url(../img/slider2.jpg)
+        .first_screen_slider_item_second
+            .first_screen_slider_item_content_wrapper
+                // margin-right: 20vw
+            .image 
+                top: 2rem
+                // transform: translate(0rem)
+                // right: 22vw
+                width: 23rem    
+        .first_screen_slider_item_first
+            .c
+                // margin-right: 10vw
+            .image 
+                top: 13vh
+                // right: 5vw
+                // transform: translateX(5rem)
+        .first_screen_slider_item_first.slick-active
+            .first_screen_slider_item_content_wrapper
+                transform: translateX(-10rem)
+                transition: all 1s linear
+            .image
+                transform: translateX(18rem)
+                transition: all 1s linear
+        .first_screen_slider_item_second.slick-active
+            .first_screen_slider_item_content_wrapper
+                transform: translateX(-10rem)
+                transition: all 1s linear
+            .image
+                transform: translateX(3rem)
+                transition: all 1s linear

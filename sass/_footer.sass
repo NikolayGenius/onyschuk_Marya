@@ -1,0 +1,102 @@
+footer 
+    padding: 4rem 0
+    background-color: $black 
+    .wrapper 
+        display: flex
+        flex-wrap: wrap 
+        justify-content: space-between
+        .footer_item 
+            width: 23%
+            padding: 1rem
+            ul
+                flex-direction: column 
+                li 
+                    padding: 0
+                    justify-content: flex-start
+            .socials
+                flex-direction: row 
+                justify-content: space-between
+                li 
+                    a 
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        &::after 
+                            font-family: $brands 
+                            color: white 
+                            font-size: inherit 
+                        &:hover::after 
+                            color: $gray
+                li:nth-child(1)
+                    a 
+                        &::after
+                            content: '\f39e'
+                li:nth-child(2)
+                    a 
+                        &::after
+                            content: '\f099'
+                li:nth-child(3)
+                    a 
+                        &::after
+                            content: '\f16d'
+                li:nth-child(4)
+                    a 
+                        &::after
+                            content: '\f231'
+                li:nth-child(5)
+                    a 
+                        &::after
+                            content: '\f167'
+            form 
+                position: relative
+                height: fit-content
+                input 
+                    height: 3rem
+                button 
+                    background-color: $gray_button
+                    text-transform: uppercase
+                    padding: 0 1rem    
+                    height: 100%
+                    margin: 0
+                    position: absolute
+                    right: 0
+                    top: 0
+                    color: $black 
+
+        .footer_item:last-child
+            width: 100%
+            display: flex
+            justify-content: space-between  
+            align-items: center
+            .language_wrapper
+                display: flex
+                align-items: center
+                p 
+                    display: flex
+                    min-width: 10rem
+                .languages
+                    overflow: hidden 
+                    margin-right: 1rem
+                    position: relative
+                    background-color: $black
+                    height: min-content
+                    .current 
+                        width: 1rem
+                        position: relative
+                        z-index: 10
+                    .dropdown_lang
+                        position: absolute
+                        z-index: 1
+                        opacity: 0 
+                        bottom: 0
+                        transform: translateY(0)
+                        transition: all .5s linear 
+                        li 
+                            padding: 0.1rem 0
+                            width: 1rem
+                            background-color: #353535
+                .languages.active 
+                    overflow: visible
+                    .dropdown_lang
+                        transform: translateY(-1rem)
+                        opacity: 1

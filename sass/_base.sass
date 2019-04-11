@@ -1,0 +1,386 @@
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+
+.bg
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+
+html,body
+  margin: 0
+  padding: 0
+  font-size: 1.3vw
+  line-height: 1.5
+  font-family: $reg
+  opacity: 1
+
+.overlay
+  // min-width: 320px
+  width: 100%
+  height: 100%
+  overflow-x: hidden
+
+
+@mixin  button($bgc, $cl, $br, $bgch, $hcl, $brh)
+  padding: 1rem 2rem
+  background-color: $bgc
+  border-radius: .2rem
+  color: $cl
+  text-transform: uppercase
+  outline: none
+  border-color: $br
+  border-width: 1px
+  border-style: solid
+  &:hover,
+  &:focus,
+  &:active
+    transition: all .5s linear
+    color: $hcl
+    background-color: $bgch
+    border-color: $brh
+    border-width: 1px
+    border-style: solid
+
+h1, .h1
+    font-size: 5vw
+    margin: .1rem 0
+    line-height: 1
+h2, .h2
+    font-size: 3.5vw
+    margin: .1rem 0
+    line-height: 1
+h3, .h3
+    font-size: 2.5vw
+    margin: .1rem 0
+    line-height: 1
+h4, .h4
+    font-size: 2vw
+    margin: .1rem 0
+    line-height: 1
+h5, .h5
+    font-size: 1.8vw
+    margin: .1rem 0
+    line-height: 1
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5
+  font-family: $bold
+  text-transform: initial
+  padding: 0
+  text-transform: uppercase
+  letter-spacing: 3px
+p,a
+  margin: 0
+  padding: 0
+  font-size: 1rem
+  font-family: $reg
+a
+  text-decoration: none
+  padding: .5rem 0
+  transition: all .5s linear
+  position: relative
+  &::after 
+    content: ''
+    width: 0 
+    transition: all .5s linear
+    position: absolute
+    bottom: 0
+    left: 0
+    background-color: $white 
+    height: 2px
+  &:hover,
+  &:focus,
+  &:active
+    color: $white
+    text-decoration: none
+    &::after 
+      width: 100%
+  i
+    &:hover
+      transition: all .5s linear
+
+input, select
+  padding: .7rem  1rem
+  border: 1px solid transparent
+  width: 100%
+  outline: none
+  font-size: inherit
+  &:focus::-webkit-input-placeholder
+    opacity: 0
+
+.img-responsive
+  display: block
+  width: 100%
+  height: 100%
+  object-fit: cover 
+  object-position: center
+  
+button , .black_button
+  outline: none
+  // font-size: 0.8rem
+  padding: 1.2rem 3rem 
+  // border-radius: .2rem
+  text-transform: uppercase
+  transition: all .5s linear
+  background-color: $black
+  border: none
+  color: $white
+  &:hover,
+  &:focus
+    box-shadow: 0 0 30px -10px $black
+  &:active 
+    box-shadow: inset 0 0 10px 3px $black
+    outline: $black
+
+.black
+  color: $black
+.white
+  color: $white
+
+.tt_upper
+  text-transform: uppercase
+.fz_reg
+  font-family: $reg
+.fz_bold
+  font-family: $bold
+.tt_initial
+  text-transform: initial
+.center
+  text-align: center
+.boxshadow_gray
+  box-shadow: 2px 8px 50px 4px rgba(53, 53, 53, .8)
+.no-gutter 
+  padding: 0
+
+.mb_0
+  margin-bottom: 0
+.mb_05
+  margin-bottom: 0.5rem  
+.mb_1
+  margin-bottom: 1rem
+.mb_2
+  margin-bottom: 2rem
+.mb_3
+  margin-bottom: 3rem
+.mb_4
+  margin-bottom: 4rem
+.mb_5
+  margin-bottom: 5rem
+.mb_6
+  margin-bottom: 6rem
+.mb_7
+  margin-bottom: 7rem
+.mb_8
+  margin-bottom: 8rem
+.mb_9
+  margin-bottom: 9rem
+.mb_10
+  margin-bottom: 10rem
+
+.mt_0 
+  margin-top: 0
+.mt_05
+  margin-top: 0.5rem  
+.mt_1
+  margin-top: 1rem
+.mt_2
+  margin-top: 2rem
+.mt_3
+  margin-top: 3rem
+.mt_4
+  margin-top: 4rem
+.mt_5
+  margin-top: 5rem
+.mt_6
+  margin-top: 6rem
+.mt_7
+  margin-top: 7rem
+.mt_8
+  margin-top: 8rem
+.mt_9
+  margin-top: 9rem
+.mt_10
+  margin-top: 10rem
+
+.ml_1
+  margin-left: 1rem
+.ml_2
+  margin-left: 2rem
+.ml_3
+  margin-left: 3rem
+.ml_4
+  margin-left: 4rem
+.ml_5
+  margin-left: 5rem
+.ml_6
+  margin-left: 6rem
+.ml_7
+  margin-left: 7rem
+.ml_8
+  margin-left: 8rem
+.ml_9
+  margin-left: 9rem
+.ml_10
+  margin-left: 10rem
+
+.mr_1
+  margin-right: 1rem
+.mr_2
+  margin-right: 2rem
+.mr_3
+  margin-right: 3rem
+.mr_4
+  margin-right: 4rem
+.mr_5
+  margin-right: 5rem
+.mr_6
+  margin-right: 6rem
+.mr_7
+  margin-right: 7rem
+.mr_8
+  margin-right: 8rem
+.mr_9
+  margin-right: 9rem
+.mr_10
+  margin-right: 10rem
+
+
+.pb-1
+  padding-bottom: 1rem
+.pb-2
+  padding-bottom: 2rem
+.pb-3
+  padding-bottom: 3rem
+.pb-4
+  padding-bottom: 4rem
+.pb-5
+  padding-bottom: 5rem
+.pb-6
+  padding-bottom: 6rem
+.pb-7
+  padding-bottom: 7rem
+.pb-8
+  padding-bottom: 8rem
+.pb-9
+  padding-bottom: 9rem
+.pb-10
+  padding-bottom: 10rem
+
+.pt_1
+  padding-top: 1rem
+.pt_2
+  padding-top: 2rem
+.pt_3
+  padding-top: 3rem
+.pt_4
+  padding-top: 4rem
+.pt_5
+  padding-top: 5rem
+.pt_6
+  padding-top: 6rem
+.pt_7
+  padding-top: 7rem
+.pt_8
+  padding-top: 8rem
+.pt_9
+  padding-top: 9rem
+.pt_10
+  padding-top: 10rem
+
+.pl_1
+  padding-left: 1rem
+.pl_2
+  padding-left: 2rem
+.pl_3
+  padding-left: 3rem
+.pl_4
+  padding-left: 4rem
+.pl_5
+  padding-left: 5rem
+.pl_6
+  padding-left: 6rem
+.pl_7
+  padding-left: 7rem
+.pl_8
+  padding-left: 8rem
+.pl_9
+  padding-left: 9rem
+.pl_10
+  padding-left: 10rem
+
+.pr-1
+  padding-right: 1rem
+.pr-2
+  padding-right: 2rem
+.pr-3
+  padding-right: 3rem
+.pr-4
+  padding-right: 4rem
+.pr-5
+  padding-right: 5rem
+.pr-6
+  padding-right: 6rem
+.pr-7
+  padding-right: 7rem
+.pr-8
+  padding-right: 8rem
+.pr-9
+  padding-right: 9rem
+.pr-10
+  padding-right: 10rem
+
+.wrapper 
+  padding: 0 10vw
+ul
+  display: flex
+  margin: 0
+  padding: 0
+  li
+    padding: .5rem .7rem
+    display: flex
+    align-items: center
+    a
+      color: $white
+
+section
+  padding: 3rem 0
+
+.slick-arrow
+  position: absolute
+  top: 3vw
+  // width: 16vw
+  z-index: 10
+  svg 
+    // width: 100%

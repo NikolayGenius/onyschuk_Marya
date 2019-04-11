@@ -1,0 +1,170 @@
+header 
+    background-color: $black
+    padding: .7 rem 0
+    .wrapper 
+        display: flex
+        justify-content: space-between
+        .basket
+            flex-basis: 5%
+        nav
+            align-items: center
+            flex-basis: 65%
+            display: flex
+            .menu 
+                
+                li 
+                    padding: .8rem
+                    a 
+                        text-transform: uppercase
+                        font-size: 0.7em
+        .logo 
+            display: flex
+            position: relative
+            margin-right: 2rem
+            flex-basis: 8%
+            &::after 
+                display: none
+            div 
+                svg 
+                    width: 3.5rem
+                    height: 3.5rem
+                    fill: $white 
+                    stroke: $black
+                    stroke-width: 2px
+            div:nth-child(1)
+                position: relative
+                z-index: 2
+            div:nth-child(2)
+                position: absolute
+                right: 1rem
+                bottom: .6rem
+                z-index: 0
+                svg 
+                    width: 3rem
+                    height: 3rem
+
+        .basket
+            display: flex
+            justify-content: center
+            align-items: center
+            span 
+                margin-left: .2rem 
+                font-size: 0.8em
+                margin-top: 0.2rem
+            .image 
+                width: 1.2vw
+                margin-top: 0.1vw
+                margin-right: 0.2rem
+        
+        .search_wrapper
+            flex-basis: 15%
+            display: flex
+            align-items: center
+            margin-right: 1rem
+            justify-content: flex-end
+            .search 	
+                position: relative
+                width: 100%
+                display: flex
+                align-items: center
+                input[type="search"] 
+                    border: none
+                    background: none
+                    z-index: 1
+                    width: 100%
+                    opacity: 0
+                    height: 2rem
+                    -webkit-appearance: none
+                    padding: 0.2rem 1rem
+                    transition: all .25s ease-in .25s
+                    color: transparent
+                    font-size: .75rem
+                    line-height: 25px
+                    &::placeholder 
+                        color: transparent
+                    &:hover 
+                        cursor: pointer
+                        &:focus 
+                            cursor: text
+                            &::placeholder 
+                                color: $gray
+                        
+                        + span 
+                            background: rgba(255,255,255,0.2)
+                        
+                    
+                    &:focus 
+                        width: 10vw
+                        // padding: 0 10px
+                        outline: none
+                        color: black
+                        opacity: 1
+                        background:none
+                        color: white
+                        + span 
+                            width: 100%
+                            height: 100%
+                            z-index: 10
+                            border-color: $white
+                            svg 
+                                opacity: 0
+                                transition-delay: .5s
+                    
+                    + span 
+                        // z-index: 1
+                        position: absolute
+                        border: 2px solid transparent
+                        top: auto
+                        width: 1.5rem
+                        
+                        padding: 0
+                        height: 1.5rem
+                        background-color: transparent
+                        transition: all .25s ease-in .25s
+                        border-radius: 25px
+                        right: 0
+                        svg 
+                            fill: $white
+                            opacity: 1
+                            width: 1.5rem
+                            right: 0
+                            position: absolute
+                            top: 0
+                            height: 1.5rem
+                            transition: all .01s ease-in 
+                      
+
+        .burger
+            display: none
+            align-items: center
+            position: relative
+            z-index: 100000
+            .burger_wrapper
+                display: flex 
+                flex-direction: column 
+                justify-content: space-between
+                width: 2rem
+                height: 1.5rem
+                span 
+                    width: 100%
+                    height: 2px
+                    background-color: $white  
+                    transition: all .4s linear
+        .burger.active 
+            position: fixed
+            z-index: 1000
+            right: 1rem
+            top: 1.5rem
+            transition-delay: all .5s linear
+            .burger_wrapper 
+                span:nth-child(1)
+                    transform: rotate(135deg) translateX(1rem)          
+                span:nth-child(2) 
+                    opacity: 0         
+                span:nth-child(3)
+                    transform: rotate(-135deg) translateX(1rem) 
+                
+            
+        
+            
+        
